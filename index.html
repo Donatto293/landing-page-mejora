@@ -10,27 +10,37 @@
 
     <script src='main.js'></script>
 </head>
-<body class="bg-primary text-white  " >
-    <header class="bg-primary-emphasis h-30 fixed-top d-flex p-3 shadow">
+<style>
+  section[id] {
+    scroll-margin-top: 120px; /* ajusta según el alto de tu header */
+  }
+</style>
+<body class="bg-primary text-white " >
+    <header class="fixed-top d-flex p-3 mb-2 shadow rounded-bottom-5" style="background-color: #603dbf; height: 100px; border-bottom: 30px;">
         <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="position-start">My cats</h1>
+            <div class="logo">
+                <a href="#">
+                <img src="./images/logo.png" alt="Logo" class="img-fluid h-30" style="width: 100px;">
+                </a>
+            </div>
+            
             <ul class="nav">
-                <li class="nav-item">
-                <a class="nav-link text-white" href="#shaira">Shaira</a>
+                <li class="nav-item me-3">
+                <a class="btn btn-light text-dark fw-semibold rounded-pill px-3" href="#shaira">Shaira</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link text-white" href="#tom">Tom</a>
+                <li class="nav-item me-3">
+                <a class="btn btn-light text-dark fw-semibold rounded-pill px-3" href="#tom">Tom</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link text-white" href="#issis">Issis</a>
+                <li class="nav-item me-3">
+                <a class="btn btn-light text-dark fw-semibold rounded-pill px-3" href="#issis">Issis</a>
                 </li>
             </ul>
             </nav>
         </div>
     </header>
 
-    <section id="shaira" class="container d-flex row-12 mt-5 border-bottom border-dark mb-5">
-        <div class="col-6 d-flex justify-content-between align-items-center">
+    <section id="shaira" class="container d-flex row-12 mt-5 border-bottom border-dark mb-5 p-5">
+        <div class="col-6 d-flex justify-content-between align-items-center ">
             <div class="col">
                 <div class=" row-6 text-start width-100 mt-2">
                     <h3 class=" text-center text-dark-emphasis  mb-1">¿Su nombre?</h3>
@@ -52,13 +62,56 @@
             </div>
         </div>
 
-        <div class="col-6 d-flex justify-content-center align-items-center m-5">
-            <div class="card text-start bg-info-subtle">
-                <img class="card-img-top  " src="./images/sharia1.jpg" alt="Title" />
-                <div class="card-body">
-                    <h4 class="card-title">Mirada asesina</h4>
-                    <p class="card-text">la cazadora nocturna fotografiada observando desde las altura su territoria</p>
+        <div class="col-6 d-flex justify-content-center align-items-center m-5 ">
+            <div id="carouselShaira" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded-4 shadow-lg">
+            
+                    <!-- Imagen 1 -->
+                    <div class="carousel-item active">
+                        <div class="card bg-light text-dark border-0 rounded-4 h-100">
+                        <img src="./images/sharia1.jpg" class="card-img-top w-100" style="height: 300px; object-fit: cover;" alt="Shaira imagen 1">
+                        <div class="card-body bg-info-subtle">
+                            <h5 class="card-title">La Vigilante Nocturna</h5>
+                            <p class="card-text">Shaira patrulla el jardín bajo la luz de la luna, en silencio y con gran elegancia.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagen 2 -->
+                    <div class="carousel-item ">
+                        <div class="card bg-light text-dark border-0 rounded-4 h-100">
+                        <img src="./images/sharia2.jpg" class="card-img-top w-100" style="height: 300px; object-fit: cover;" alt="Shaira imagen 2">
+                        <div class="card-body bg-info-subtle">
+                            <h5 class="card-title">Sombras Felinas</h5>
+                            <p class="card-text">Sus ojos brillan como faros mientras observa todo desde su escondite favorito.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagen 3 -->
+                    <div class="carousel-item">
+                        <div class="card bg-light text-dark border-0 rounded-4 h-100">
+                        <img src="./images/shaira3.jpg" class="card-img-top w-100" style="height: 300px; object-fit: cover;" alt="Shaira imagen 3">
+                        <div class="card-body bg-info-subtle">
+                            <h5 class="card-title">vista en tierras aladas</h5>
+                            <p class="card-text">Después de un largo día de vigilancia, nada como una siesta en su rincón favorito.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    </div>
+
+                    <!-- Botones del carrusel -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselShaira" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselShaira" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                    </button>
             </div>
+        </div>
 
             
             
@@ -71,7 +124,7 @@
 
     </section>
 
-    <section id="tom" class="container d-flex row-12 mt-5 mb-5 border-bottom border-dark">
+    <section id="tom" class="container d-flex row-12 mt-5 mb-5 border-bottom border-dark p-5">
         <div class="col-6 d-flex justify-content-between align-items-center">
             <div class="col">
                 <div class=" row-6 text-start width-100 mt-2">
@@ -93,14 +146,56 @@
             </div>
         </div>
 
-        <div class="col-6 d-flex justify-content-center align-items-center m-5">
-            <div class="card text-start bg-info-subtle">
-                <img class="card-img-top  " src="./images/tom1.jpg" alt="Title" />
-                <div class="card-body">
-                    <h4 class="card-title">Autoridad Absoluta</h4>
-                    <p class="card-text">Pose de Gobenador su amplio impetu se ve reflejada con su postura incluso al descansar</p>
-            </div>
+        <div class="col-6 d-flex justify-content-center align-items-center m-5 ">
+                <div id="carouseltom" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded-4 shadow-lg">
+            
+                    <!-- Imagen 1 -->
+                    <div class="carousel-item active">
+                        <div class="card bg-light text-dark border-0 rounded-4 h-100">
+                        <img src="./images/tom1.jpg" class="card-img-top w-100" style="height: 300px; object-fit: cover;" alt="Shaira imagen 1">
+                        <div class="card-body bg-info-subtle">
+                            <h5 class="card-title">La Vigilante Nocturna</h5>
+                            <p class="card-text">Tom siempre mantiene su mirada fija, observando cada rincón. Su agudo sentido de vigilancia lo convierte en el guardián imbatible de la casa, incluso cuando está descansando.</p>
+                        </div>
+                        </div>
+                    </div>
 
+                    <!-- Imagen 2 -->
+                    <div class="carousel-item ">
+                        <div class="card bg-light text-dark border-0 rounded-4 h-100">
+                        <img src="./images/tom2.jpg" class="card-img-top w-100" style="height: 300px; object-fit: cover;" alt="Shaira imagen 2">
+                        <div class="card-body bg-info-subtle">
+                            <h5 class="card-title">Desde la casa siempre preparado</h5>
+                            <p class="card-text">Sus ojos nunca pierden detalle, incluso mientras yace en la tranquilidad de su rincón favorito. Tom es un felino astuto, capaz de detectar cualquier movimiento en la penumbra.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagen 3 -->
+                    <div class="carousel-item">
+                        <div class="card bg-light text-dark border-0 rounded-4 h-100">
+                        <img src="./images/tom3.jpg" class="card-img-top w-100" style="height: 300px; object-fit: cover;" alt="Shaira imagen 3">
+                        <div class="card-body bg-info-subtle">
+                            <h5 class="card-title">Sueño del Guerrero</h5>
+                            <p class="card-text">Después de un largo día de patrullaje, Tom se toma un merecido descanso. Su postura relajada refleja la calma que siente al estar en su territorio, siempre listo para actuar.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    </div>
+
+                    <!-- Botones del carrusel -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouseltom" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouseltom" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                    </button>
+            </div>
+        </div>
             
             
            
@@ -112,7 +207,7 @@
 
     </section>
 
-    <section id="issis" class="container d-flex row-12 mt-4 mb-5 border-bottom border-dark">
+    <section id="issis" class="container d-flex row-12 mt-4 mb-5 border-bottom border-dark p-5">
         <div class="col-6 d-flex justify-content-between align-items-center">
             <div class="col">
                 <div class=" row-6 text-start width-100 mt-2">
@@ -135,33 +230,67 @@
         </div>
 
         <div class="col-6 d-flex justify-content-center align-items-center m-5">
-            <div class="card text-start bg-info-subtle">
-                <img class="card-img-top  " src="./images/issis1.jpg" alt="Title" />
-                <div class="card-body">
-                    <h4 class="card-title">La tranquilidad de la sabiduria</h4>
-                    <p class="card-text">Los años no llegan solos, vienen con sabidura y experiencia, la paz reflejada de una larga vida</p>
+            <div id="carouselissis" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded-4 shadow-lg">
+            
+                    <!-- Imagen 1 -->
+                    <div class="carousel-item active">
+                        <div class="card bg-light text-dark border-0 rounded-4 h-100">
+                        <img src="./images/issis1.jpg" class="card-img-top w-100" style="height: 300px; object-fit: cover;" alt="Shaira imagen 1">
+                        <div class="card-body bg-info-subtle">
+                            <h5 class="card-title">El Reposo de la Matriarca</h5>
+                            <p class="card-text">Issis, la matriarca de la casa, disfruta de la tranquilidad que solo los años de experiencia le han otorgado. Su presencia es serena y llena de sabiduría, incluso cuando está descansando.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagen 2 -->
+                    <div class="carousel-item ">
+                        <div class="card bg-light text-dark border-0 rounded-4 h-100">
+                        <img src="./images/issis2.jpg" class="card-img-top w-100" style="height: 300px; object-fit: cover;" alt="Shaira imagen 2">
+                        <div class="card-body bg-info-subtle">
+                            <h5 class="card-title">La vigilancia de la moral</h5>
+                            <p class="card-text">Sus ojos brillan la luz celestia que juzga las acciones de su pueblo</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagen 3 -->
+                    <div class="carousel-item">
+                        <div class="card bg-light text-dark border-0 rounded-4 h-100">
+                        <img src="./images/issis3.jpg" class="card-img-top w-100" style="height: 300px; object-fit: cover;" alt="Shaira imagen 3">
+                        <div class="card-body bg-info-subtle">
+                            <h5 class="card-title">Descanso de la Protectora</h5>
+                            <p class="card-text">Tras un día cuidando de su familia, Issis se acurruca en su lugar favorito. Su sueño es profundo, pero siempre lo suficientemente ligero como para despertar ante cualquier señal de peligro</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    </div>
+
+                    <!-- Botones del carrusel -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselissis" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselissis" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                    </button>
             </div>
-
-            
-            
-           
-
-           
-
-           
         </div>
 
     </section>
     <footer class="bg-dark text-white mt-5 pt-4 pb-3">
         <div class="container text-center">
           <h5 class="mb-3">¿Quieres apoyar a nuestros gatos?</h5>
-          <p class="mb-2">Tu donación ayuda a mantener a Shaira, Tom e Issis felices, seguros y muy bien alimentados 🐾</p>
+          <p class="mb-2">Si tienes una ayuda a mantener felices a Shaira, Tom e Issis felices, seguros y muy bien alimentados 🐾</p>
       
           <p class="mb-1"><strong>Cuenta Bancaria:</strong> 1234 5678 9012 3456</p>
           <p class="mb-1"><strong>Nombre:</strong> Fundación Gatuna mi casa</p>
           <p class="mb-3"><strong>Email:</strong> Donatojimenez293@gmail.com</p>
       
-          <a href="#" class="btn btn-outline-light">Donar Ahora</a>
+          <a href="./formulario.html" class="btn btn-outline-light">Comunicate con Nosotros</a>
       
           <hr class="bg-secondary my-4">
       
